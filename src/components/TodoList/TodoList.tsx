@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { todoList, addItem } from './todoListSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import React from "react";
+import styled from "styled-components";
+import { todoList, addItem } from "./todoListSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 const StyledList = styled.ul`
-  background-color: #fff
+  background-color: #fff;
 `;
 
 const AddButton = styled.button`
@@ -21,15 +21,19 @@ const StyledItem = styled.li`
 `;
 
 export const TodoList: React.FunctionComponent<any> = (): any => {
-
   const todoListArray = useSelector(todoList);
   const dispatch = useDispatch();
 
   return (
     <StyledList>
-      {todoListArray.map((todo, index) => <StyledItem key={index}> {todo.task}</StyledItem>)}
-      <AddButton onClick={() => dispatch(addItem({task: 'new task', checked: false}))}>Add Item</AddButton>
+      {todoListArray.map((todo, index) => (
+        <StyledItem key={index}> {todo.task}</StyledItem>
+      ))}
+      <AddButton
+        onClick={() => dispatch(addItem({ task: "new task", checked: false }))}
+      >
+        Add Item
+      </AddButton>
     </StyledList>
-  )
-
-}
+  );
+};

@@ -1,0 +1,17 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier",
+    "tslint-react",
+    "tslint-eslint-rules"
+  ],
+  "jsRules": {},
+  "rules": {
+    "triple-equals": true,
+    "no-empty": true,
+    "eofline": true,
+    "no-trailing-whitespace": [true, "ignore-comments"]
+  },
+  "rulesDirectory": []
+}

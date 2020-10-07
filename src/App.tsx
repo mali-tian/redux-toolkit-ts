@@ -1,13 +1,12 @@
-import React from 'react';
-import './App.css';
-import { TodoList, Pokemo } from './components';
+import React from "react";
+import { TodoList, Pokemo } from "./components";
 
-function App(){
+function App() {
   return (
     <div className="App">
       <TodoList />
       <Pokemo />
-    </div> 
+    </div>
   );
 }
 
